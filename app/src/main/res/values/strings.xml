@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Mosque Manager</string>
+    <string name="title_activity_about">About Mosque Manager</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_update_namaz_times">Update Namaz Times</string>
+    <string name="title_activity_update_hijri_adjustment">Update Hijri Adjustment</string>
+    <string name="title_activity_update_occasions">Update Occasions</string>
+    <string name="title_activity_add_occasion">Add Occasion</string>
+
+    <!--<string name="api_host">192.168.1.185</string>-->
+    <string name="api_host">139.99.32.219:8080</string>
+    <string name="server_down_message">We are having trouble communicating with Server.\nPlease try again after sometime.</string>
+
+    <string name="txt_author">Author:</string>
+    <string name="author_name">Alithis Technologies</string>
+    <string name="contactus_email_link">mailto:sales@alithistech.com</string>
+    <string name="contactus_email_id">sales@alithistech.com</string>
+    <string name="contact_number">+91 9880506766</string>
+    <!--<string name="website_name">192.168.1.185</string>-->
+    <string name="website_name">alithistech.com</string>
+
+    <string name="url_instagram">https://www.instagram.com/md_mujeeb//</string>
+    <string name="url_googleplus">https://plus.google.com/+MohammadMujeeb</string>
+    <string name="url_facebook">https://www.facebook.com/Alithis-Technologies-223547411531338</string>
+    <string name="url_twitter">https://twitter.com/alithistech</string>
+
+    <!-- Menu items -->
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_login">Login</string>
+    <string name="action_logout">Logout</string>
+
+    <!-- Buttons -->
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
+    <string name="button_update_namaz_times">Update Namaz Times</string>
+    <string name="button_update_hijri_adjustment">Update Hijri Adjustment</string>
+    <string name="button_update_occasions">Update Occasions</string>
+    <string name="button_update_screen_saver_schedule">Update Screen Saver schedule</string>
+    <string name="button_refresh_clock">Refresh Clock</string>
+    <string name="button_add_occasion">Add Occasion</string>
+    <string name="button_close">Close</string>
+    <string name="button_update">Update</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_change">Change</string>
+    <string name="button_enable_screen_saver">Enable Screen Saver</string>
+    <string name="button_disable_screen_saver">Disable Screen Saver</string>
+
+    <!-- Texts -->
+    <string name="txt_login_to_continue">Login to continue:</string>
+    <string name="txt_user_id">User Id</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_colon">:</string>
+    <string name="txt_hours">Hours</string>
+    <string name="txt_minutes">Minutes</string>
+    <string name="txt_hijri_adjustment">Hijri adjustment</string>
+    <string name="txt_enter_hijri_adjustment">Enter Hijri adjustment in Days:</string>
+    <string name="txt_date">Date:</string>
+    <string name="txt_description">Description:</string>
+    <string name="txt_start_time">Start time:</string>
+    <string name="txt_end_time">End time:</string>
+
+    <!-- Messages -->
+    <string name="message_title_warning">Warning!</string>
+    <string name="message_title_success">Success!</string>
+    <string name="message_title_confirm">Confirm Operation!</string>
+    <string name="message_title_processing">Processing.</string>
+    <string name="message_logout_successful">You have successfully logged out!</string>
+    <string name="message_login_successful">Login Successful!</string>
+    <string name="message_login_failed">Login Failed.</string>
+    <string name="message_namaz_time_update_successful">Namaz time updated successfully!</string>
+    <string name="message_screen_saver_schedule_update_successful">Screen Saver schedule updated successfully!</string>
+    <string name="message_screen_saver_enable_successful">Screen saver was enabled successfully!</string>
+    <string name="message_screen_saver_disable_successful">Screen saver was disabled successfully!</string>
+    <string name="message_hijri_adjustment_update_successful">Hijri Adjustment updated successfully!</string>
+    <string name="message_refresh_clock_successfully">Request for Clock refresh submitted Successfully!</string>
+    <string name="message_question_confirm_clock_refresh">Are you sure that you want to Submit Clock refresh request?</string>
+    <string name="message_question_confirm_screen_saver_action">Are you sure that you want to change Screen saver Status?</string>
+    <string name="message_delete_occasion_successful">Occasion was deleted Successfully!</string>
+    <string name="message_add_occasion_successful">Occasion was Added Successfully!</string>
+    <string name="message_no_occasions">You have not yet added any Occasions.</string>
+
+    <!-- Warnings -->
+    <string name="warning_invalid_user_id">Please enter a valid User Id</string>
+    <string name="warning_invalid_password">Please enter a valid Password</string>
+    <string name="warning_invalid_credentials">Incorrect User Id or Password.</string>
+    <string name="warning_invalid_namaz_hours">Please enter a value between 1 and 12 for {1} Hours.</string>
+    <string name="warning_invalid_namaz_minutes">Please enter a value between 0 and 59 for {1} Minutes.</string>
+    <string name="warning_invalid_hijri_adjustment">Please enter a value between -30 and 30.</string>
+    <string name="warning_invalid_description">Please enter name of the Occasion.</string>
+
+    <!-- Errors -->
+    <string name="error_unknown">An Unknown error occured while performing requested operation.</string>
+
+</resources>

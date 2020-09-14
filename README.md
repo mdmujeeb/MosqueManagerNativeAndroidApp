@@ -1,0 +1,2 @@
+# MosqueManagerNativeAndroidApp
+Code for MosqueManagerNativeAndroidApp

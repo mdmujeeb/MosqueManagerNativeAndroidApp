@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Mosque Manager</string>
-    <string name="title_activity_about">About Mosque Manager</string>
+    <string name="app_name">Mosque Dashboard</string>
+    <string name="title_activity_about">About Mosque Dashboard</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_update_namaz_times">Update Namaz Times</string>
     <string name="title_activity_update_hijri_adjustment">Update Hijri Adjustment</string>
@@ -8,13 +8,13 @@
     <string name="title_activity_add_occasion">Add Occasion</string>
 
     <!--<string name="api_host">192.168.1.185</string>-->
-    <string name="api_host">139.99.32.219:8080</string>
+    <string name="api_host">mosquemanager.azurewebsites.net</string>
     <string name="server_down_message">We are having trouble communicating with Server.\nPlease try again after sometime.</string>
 
     <string name="txt_author">Author:</string>
     <string name="author_name">Alithis Technologies</string>
-    <string name="contactus_email_link">mailto:sales@alithistech.com</string>
-    <string name="contactus_email_id">sales@alithistech.com</string>
+    <string name="contactus_email_link">mailto:mujeeb@alithistech.com</string>
+    <string name="contactus_email_id">mujeeb@alithistech.com</string>
     <string name="contact_number">+91 9880506766</string>
     <!--<string name="website_name">192.168.1.185</string>-->
     <string name="website_name">alithistech.com</string>

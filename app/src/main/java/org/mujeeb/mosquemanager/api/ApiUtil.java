@@ -14,17 +14,17 @@ import java.util.Map;
 
 public class ApiUtil {
 
-    public static String apiHost = "192.168.1.190";
+    public static String apiHost = "mosquemanager.azurewebsites.net";
 //    public static final String API_HOST = "mujeeb.org";
 
     // User API Calls
-    public static final String API_ENDPOINT_LOGIN                   = "apiAuthenticate";
+    public static final String API_ENDPOINT_LOGIN                   = "authenticate";
     public static final String API_ENDPOINT_GET_NAMAZ_TIMES         = "getNamazTimes";
-    public static final String API_ENDPOINT_UPDATE_NAMAZ_TIMES      = "apiUpdateNamazTimes";
-    public static final String API_ENDPOINT_UPDATE_REFRESH_REQUIRED = "apiUpdateRefreshRequired";
+    public static final String API_ENDPOINT_UPDATE_NAMAZ_TIMES      = "updateNamazTimes";
+    public static final String API_ENDPOINT_UPDATE_REFRESH_REQUIRED = "updateRefreshRequired";
     public static final String API_ENDPOINT_GET_OCCASIONS           = "getOccasions";
-    public static final String API_ENDPOINT_DELETE_OCCASION         = "apiDeleteOccasion";
-    public static final String API_ENDPOINT_ADD_OCCASION            = "apiAddOccasion";
+    public static final String API_ENDPOINT_DELETE_OCCASION         = "deleteOccasion";
+    public static final String API_ENDPOINT_ADD_OCCASION            = "addOccasion";
 
     // Takes JSON string as parameter, posts to API endpoint and returns another JSON string
     public static String doPost(String endPointUrl, String json) {

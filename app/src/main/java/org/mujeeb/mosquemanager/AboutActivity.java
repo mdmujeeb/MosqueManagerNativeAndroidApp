@@ -37,37 +37,37 @@ public class AboutActivity extends AppCompatActivity {
         });*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageView btnInstagram = (ImageView) findViewById(R.id.imgInstagram);
-        btnInstagram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_instagram));
-            }
-        });
-
-        ImageView btnGooglePlus = (ImageView) findViewById(R.id.imgGooglePlus);
-        btnGooglePlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_googleplus));
-            }
-        });
-
-        ImageView btnFacebook = (ImageView) findViewById(R.id.imgFacebook);
-        btnFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_facebook));
-            }
-        });
-
-        ImageView btnTwitter = (ImageView) findViewById(R.id.imgTwitter);
-        btnTwitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_twitter));
-            }
-        });
+//        ImageView btnInstagram = (ImageView) findViewById(R.id.imgInstagram);
+//        btnInstagram.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_instagram));
+//            }
+//        });
+//
+//        ImageView btnGooglePlus = (ImageView) findViewById(R.id.imgGooglePlus);
+//        btnGooglePlus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_googleplus));
+//            }
+//        });
+//
+//        ImageView btnFacebook = (ImageView) findViewById(R.id.imgFacebook);
+//        btnFacebook.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_facebook));
+//            }
+//        });
+//
+//        ImageView btnTwitter = (ImageView) findViewById(R.id.imgTwitter);
+//        btnTwitter.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                UIUtil.goToUrl(AboutActivity.this, resources.getString(R.string.url_twitter));
+//            }
+//        });
 
         btnClose = (Button) findViewById(R.id.btnClose);
         btnClose.setOnClickListener(new View.OnClickListener() {

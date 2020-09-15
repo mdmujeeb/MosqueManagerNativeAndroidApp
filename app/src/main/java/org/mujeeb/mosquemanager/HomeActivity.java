@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity implements APICallCallback {
 
-    protected String returnBackURL = "http://petrolondemand.in/";
+    protected String returnBackURL = "http://alithistech.com";
 
     protected Resources resources;
     protected Menu menu;

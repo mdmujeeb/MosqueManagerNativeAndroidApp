@@ -2,8 +2,8 @@ package org.mujeeb.mosquemanager;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.mujeeb.mosquemanager.api.APICallAsyncTask;
 import org.mujeeb.mosquemanager.api.APICallCallback;
 import org.mujeeb.mosquemanager.api.ApiUtil;
 import org.mujeeb.mosquemanager.beans.request.BaseRequestBean;
@@ -19,7 +18,6 @@ import org.mujeeb.mosquemanager.beans.response.BaseResponseBean;
 import org.mujeeb.mosquemanager.util.JsonUtil;
 import org.mujeeb.mosquemanager.util.UIUtil;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity implements APICallCallback {

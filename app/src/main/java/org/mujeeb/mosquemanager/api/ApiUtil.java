@@ -20,7 +20,7 @@ public class ApiUtil {
     // User API Calls
     public static final String API_ENDPOINT_LOGIN                   = "authenticate";
     public static final String API_ENDPOINT_GET_NAMAZ_TIMES         = "getNamazTimes";
-    public static final String API_ENDPOINT_UPDATE_NAMAZ_TIMES      = "updateNamazTimes";
+    public static final String API_ENDPOINT_UPDATE_NAMAZ_TIME       = "updateNamazTime";
     public static final String API_ENDPOINT_UPDATE_REFRESH_REQUIRED = "updateRefreshRequired";
     public static final String API_ENDPOINT_GET_OCCASIONS           = "getOccasions";
     public static final String API_ENDPOINT_DELETE_OCCASION         = "deleteOccasion";
@@ -29,7 +29,7 @@ public class ApiUtil {
     // Takes JSON string as parameter, posts to API endpoint and returns another JSON string
     public static String doPost(String endPointUrl, String json) {
 
-        String strUrl = "http://" + apiHost + "/" + endPointUrl;
+        String strUrl = "https://" + apiHost + "/" + endPointUrl;
 
         try {
             URL url = new URL(strUrl);
@@ -61,7 +61,7 @@ public class ApiUtil {
     // Takes JSON string as parameter, posts to API endpoint and returns another JSON string
     public static String doGet(String endPointUrl, Map<String,String> parameters) {
 
-        String strUrl = "http://" + apiHost + "/" + endPointUrl;
+        String strUrl = "https://" + apiHost + "/" + endPointUrl;
 
         try {
             StringBuilder builder = new StringBuilder("?");

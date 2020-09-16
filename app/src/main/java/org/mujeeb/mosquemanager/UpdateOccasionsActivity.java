@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +16,7 @@ import org.mujeeb.mosquemanager.api.APICallCallback;
 import org.mujeeb.mosquemanager.api.ApiUtil;
 import org.mujeeb.mosquemanager.beans.request.OccasionRequestBean;
 import org.mujeeb.mosquemanager.beans.response.BaseResponseBean;
+import org.mujeeb.mosquemanager.beans.response.OccasionBean;
 import org.mujeeb.mosquemanager.util.JsonUtil;
 import org.mujeeb.mosquemanager.util.UIUtil;
 
@@ -34,7 +35,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
     protected Button btnAddOccasion;
     protected Button btnCancel;
 
-    protected List<Map<String,String>> occasions;
+    protected List<Map<String,Object>> occasions;
 
 
     @Override
@@ -42,7 +43,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
 
         if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_GET_OCCASIONS)) {
 
-            occasions = (List<Map<String,String>>) JsonUtil.objectFromJson(result, List.class);
+            occasions = (List<Map<String,Object>>) JsonUtil.objectFromJson(result, List.class);
             updateOccasionsView();
 
         } else if(apiEndpoint.equals(ApiUtil.API_ENDPOINT_DELETE_OCCASION)) {
@@ -136,7 +137,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
             return;
         }
 
-        for(final Map<String,String> occasion : occasions) {
+        for(final Map<String,Object> occasion : occasions) {
 
             LinearLayout layout = new LinearLayout(UpdateOccasionsActivity.this);
             layout.setGravity(Gravity.START | Gravity.CENTER_HORIZONTAL);
@@ -149,7 +150,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
             TextView date = new TextView(UpdateOccasionsActivity.this);
             layout.addView(date);
             date.setGravity(Gravity.START | Gravity.CENTER_HORIZONTAL);
-            date.setText(occasion.get("date"));
+            date.setText(occasion.get("date").toString());
             date.setPadding(20,10,20, 10);
             date.setTypeface(null, Typeface.BOLD);
             date.setTextColor(resources.getColor(R.color.defaultTextColor));
@@ -157,7 +158,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
             TextView description = new TextView(UpdateOccasionsActivity.this);
             layout.addView(description);
             description.setGravity(Gravity.START | Gravity.CENTER_HORIZONTAL);
-            description.setText(occasion.get("description"));
+            description.setText(occasion.get("description").toString());
             description.setPadding(20,10,20, 10);
             description.setTypeface(null, Typeface.BOLD);
             description.setTextColor(resources.getColor(R.color.defaultTextColor));
@@ -169,7 +170,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
             btnDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    makeDeleteOccasionCall(occasion.get("id"));
+                    makeDeleteOccasionCall(occasion.get("id").toString());
                 }
             });
         }
@@ -178,7 +179,7 @@ public class UpdateOccasionsActivity extends AppCompatActivity implements APICal
     private void makeDeleteOccasionCall(String id) {
 
         try {
-            OccasionRequestBean request = new OccasionRequestBean(Integer.parseInt(id), null, null);
+            OccasionRequestBean request = new OccasionRequestBean((long)Double.parseDouble(id), null, null);
             request.setUserId(userId);
             request.setPassword(password);
             UIUtil.makeAPICall(UpdateOccasionsActivity.this, ApiUtil.API_ENDPOINT_DELETE_OCCASION

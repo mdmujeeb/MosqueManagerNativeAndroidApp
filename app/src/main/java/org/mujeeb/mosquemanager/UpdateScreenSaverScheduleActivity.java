@@ -2,7 +2,7 @@ package org.mujeeb.mosquemanager;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,7 +48,7 @@ public class UpdateScreenSaverScheduleActivity extends AppCompatActivity impleme
             screenSaverSchedule = namazTimes.get(Constants.KEY_SCREEN_SAVER_SCHEDULE);
             updateScheduleData();
 
-        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES)) {
+        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME)) {
 
             BaseResponseBean response = (BaseResponseBean) JsonUtil.objectFromJson(result, BaseResponseBean.class);
             if(response.getResultCode() != 0) {
@@ -215,7 +215,7 @@ public class UpdateScreenSaverScheduleActivity extends AppCompatActivity impleme
             NamazTimeUpdateRequestBean request = new NamazTimeUpdateRequestBean(currentNamazTimeName, currentNamazTime);
             request.setUserId(userId);
             request.setPassword(password);
-            UIUtil.makeAPICall(UpdateScreenSaverScheduleActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES
+            UIUtil.makeAPICall(UpdateScreenSaverScheduleActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME
                                                             , JsonUtil.jsonFromObject(request));
 
         } catch(Throwable ex) {

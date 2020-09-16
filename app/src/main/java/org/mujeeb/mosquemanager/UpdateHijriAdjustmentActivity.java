@@ -2,7 +2,7 @@ package org.mujeeb.mosquemanager;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +42,7 @@ public class UpdateHijriAdjustmentActivity extends AppCompatActivity implements 
             namazTimes = (Map<String,String>) JsonUtil.objectFromJson(result, Map.class);
             updateView();
 
-        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES)) {
+        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME)) {
 
             BaseResponseBean response = (BaseResponseBean) JsonUtil.objectFromJson(result, BaseResponseBean.class);
             if(response.getResultCode() != 0) {
@@ -123,7 +123,7 @@ public class UpdateHijriAdjustmentActivity extends AppCompatActivity implements 
 
         try {
             Map<String,String> parameters = new HashMap<String,String>();
-            parameters.put("id", "0");
+            parameters.put("id", userId);
             UIUtil.makeAPICall(UpdateHijriAdjustmentActivity.this, ApiUtil.API_ENDPOINT_GET_NAMAZ_TIMES, parameters);
 
         } catch(Throwable ex) {
@@ -149,7 +149,7 @@ public class UpdateHijriAdjustmentActivity extends AppCompatActivity implements 
             NamazTimeUpdateRequestBean request = new NamazTimeUpdateRequestBean(KEY_HIJRI_ADJUSTMENT, hijriAdjustment);
             request.setUserId(userId);
             request.setPassword(password);
-            UIUtil.makeAPICall(UpdateHijriAdjustmentActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES
+            UIUtil.makeAPICall(UpdateHijriAdjustmentActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME
                                                             , JsonUtil.jsonFromObject(request));
 
         } catch(Throwable ex) {

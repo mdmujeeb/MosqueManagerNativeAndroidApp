@@ -1,7 +1,7 @@
 package org.mujeeb.mosquemanager;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import org.mujeeb.mosquemanager.api.APICallCallback;
 import org.mujeeb.mosquemanager.api.ApiUtil;
-import org.mujeeb.mosquemanager.beans.request.BaseRequestBean;
 import org.mujeeb.mosquemanager.beans.request.NamazTimeUpdateRequestBean;
 import org.mujeeb.mosquemanager.beans.response.BaseResponseBean;
 import org.mujeeb.mosquemanager.util.JsonUtil;
@@ -51,7 +50,7 @@ public class UpdateNamazTimesActivity extends AppCompatActivity implements APICa
             namazTimes = (Map<String,String>) JsonUtil.objectFromJson(result, Map.class);
             updateNamazTimeView();
 
-        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES)) {
+        } else if(apiEndpoint.equalsIgnoreCase(ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME)) {
 
             BaseResponseBean response = (BaseResponseBean) JsonUtil.objectFromJson(result, BaseResponseBean.class);
             if(response.getResultCode() != 0) {
@@ -205,7 +204,7 @@ public class UpdateNamazTimesActivity extends AppCompatActivity implements APICa
             NamazTimeUpdateRequestBean request = new NamazTimeUpdateRequestBean(currentNamazTimeName, currentNamazTime);
             request.setUserId(userId);
             request.setPassword(password);
-            UIUtil.makeAPICall(UpdateNamazTimesActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIMES
+            UIUtil.makeAPICall(UpdateNamazTimesActivity.this, ApiUtil.API_ENDPOINT_UPDATE_NAMAZ_TIME
                                                             , JsonUtil.jsonFromObject(request));
 
         } catch(Throwable ex) {

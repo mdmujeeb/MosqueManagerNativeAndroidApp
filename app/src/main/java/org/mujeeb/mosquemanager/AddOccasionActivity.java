@@ -2,7 +2,7 @@ package org.mujeeb.mosquemanager;
 
 import android.app.DatePickerDialog;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +21,6 @@ import org.mujeeb.mosquemanager.util.UIUtil;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 public class AddOccasionActivity extends AppCompatActivity implements APICallCallback{

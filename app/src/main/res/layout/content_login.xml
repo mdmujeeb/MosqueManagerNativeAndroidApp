@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="org.mujeeb.mosquemanager.LoginActivity"
-    tools:showIn="@layout/activity_login">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                                   tools:context="org.mujeeb.mosquemanager.LoginActivity"
+                                                   tools:showIn="@layout/activity_login">
 
     <ScrollView
         android:id="@+id/scrContentScreen"
@@ -28,7 +28,7 @@
             android:textColor="@color/defaultTextColor"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp">
@@ -46,9 +46,9 @@
             android:textColor="@color/defaultTextColor"
             android:maxLength="50" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp">
@@ -66,7 +66,7 @@
             android:textColor="@color/defaultTextColor"
             android:maxLength="50" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnLogin"
@@ -94,4 +94,4 @@
             android:layout_height="wrap_content"
             android:indeterminate="true" />
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

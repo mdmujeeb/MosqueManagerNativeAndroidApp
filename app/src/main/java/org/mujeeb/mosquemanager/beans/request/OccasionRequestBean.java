@@ -4,23 +4,32 @@ public class OccasionRequestBean extends BaseRequestBean {
 
 	private static final long serialVersionUID = 1L;
 
-	private Integer id;
+	private Long id;
 	private String date;
 	private String description;
+	private Integer masjidId;
 	
 	public OccasionRequestBean() {}
-	
-	public OccasionRequestBean(Integer id, String date, String description) {
+
+	public Integer getMasjidId() {
+		return masjidId;
+	}
+
+	public void setMasjidId(Integer masjidId) {
+		this.masjidId = masjidId;
+	}
+
+	public OccasionRequestBean(Long id, String date, String description) {
 		this.id = id;
 		this.date = date;
 		this.description = description;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

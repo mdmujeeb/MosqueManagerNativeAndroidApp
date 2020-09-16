@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'alithistech.com'
+            keyAlias 'upload'
             keyPassword 'Mummy@123'
-            storeFile file('D:/GoogleCloudCredentials/mujeebkeystore')
+            storeFile file('D:/GoogleCloudCredentials/MosqueManager.jks')
             storePassword 'Mummy@123'
         }
     }
@@ -14,8 +14,8 @@ android {
         applicationId "org.mujeeb.mosquemanager"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 11
-        versionName "11.0"
+        versionCode 14
+        versionName "14.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         signingConfig signingConfigs.config
     }

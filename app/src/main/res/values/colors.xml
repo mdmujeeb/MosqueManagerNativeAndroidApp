@@ -6,4 +6,5 @@
 
     <color name="defaultTextColor">#000000</color>
     <color name="colorCardBackground">#EEEEEE</color>
+    <color name="whiteTextColor">#FFFFFF</color>
 </resources>

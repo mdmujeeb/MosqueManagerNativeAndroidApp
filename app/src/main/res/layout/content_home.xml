@@ -58,6 +58,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_update_hijri_adjustment"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center"/>
 
@@ -66,6 +68,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_update_namaz_times"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center"/>
 
@@ -84,6 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_update_occasions"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center"/>
 
@@ -92,6 +98,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_refresh_clock"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center"/>
 
@@ -110,6 +118,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_enable_screen_saver"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_horizontal|center_vertical"/>
@@ -119,6 +129,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_update_screen_saver_schedule"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/whiteTextColor"
                         android:textAllCaps="false"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_horizontal|center_vertical"/>

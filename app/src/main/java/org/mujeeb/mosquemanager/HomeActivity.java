@@ -96,7 +96,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         resources = getResources();
@@ -105,7 +105,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
 //        UIUtil.showToast(HomeActivity.this, "API Host: " + apiHost, Toast.LENGTH_LONG);
         ApiUtil.setApiHost(apiHost);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,12 +114,12 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
             }
         });
 
-        Button btnUpdateHijriAdjustment = (Button) findViewById(R.id.btnUpdateHijriAdjustment);
-        Button btnUpdateNamazTimes = (Button) findViewById(R.id.btnUpdateNamazTimes);
-        Button btnUpdateOccasions = (Button) findViewById(R.id.btnUpdateOccasions);
-        Button btnRefreshClock = (Button) findViewById(R.id.btnRefreshClock);
-        Button btnUpdateScreenSaverSchedule = (Button) findViewById(R.id.btnUpdateScreenSaverSchedule);
-        btnScreenSaver = (Button) findViewById(R.id.btnScreenSaver);
+        Button btnUpdateHijriAdjustment = findViewById(R.id.btnUpdateHijriAdjustment);
+        Button btnUpdateNamazTimes = findViewById(R.id.btnUpdateNamazTimes);
+        Button btnUpdateOccasions = findViewById(R.id.btnUpdateOccasions);
+        Button btnRefreshClock = findViewById(R.id.btnRefreshClock);
+        Button btnUpdateScreenSaverSchedule = findViewById(R.id.btnUpdateScreenSaverSchedule);
+        btnScreenSaver = findViewById(R.id.btnScreenSaver);
 
         btnUpdateHijriAdjustment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,7 +212,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
 
         UIUtil.setLoginLogoutMenuTitle(HomeActivity.this, password, menu);
 
-        webView = (WebView) findViewById(R.id.webView);
+        webView = findViewById(R.id.webView);
         String url = getURL();
 
         webView.setInitialScale(100);
@@ -262,7 +262,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
     protected void makeGetNamazTimesAPICall() {
 
         try {
-            Map<String,String> parameters = new HashMap<String,String>();
+            Map<String,String> parameters = new HashMap<>();
             parameters.put("id", userId);
             UIUtil.makeAPICall(HomeActivity.this, ApiUtil.API_ENDPOINT_GET_NAMAZ_TIMES, parameters);
 
@@ -275,7 +275,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
 
     private void performScreenSaverAction() {
 
-        String action = "false";
+        String action;
 
         if(isScreenSaverEnabled == null || isScreenSaverEnabled.isEmpty() || isScreenSaverEnabled.equals("false")) {
 

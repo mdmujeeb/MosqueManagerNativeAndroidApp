@@ -358,7 +358,7 @@ public class HomeActivity extends AppCompatActivity implements APICallCallback {
     protected String getURL() {
 
         return "https://yellow-pebble-09aa20800.azurestaticapps.net/index"
-                + (userId.equals("1") ? "" : userId)
+                + (userId.equals("1") || userId.equals("0") ? "" : userId)
                 + "_static.html";
 //        return "http://" + resources.getString(R.string.api_host) + "?id=" + userId + "&REFRESHES=false";
     }

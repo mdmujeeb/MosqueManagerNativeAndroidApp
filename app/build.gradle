@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'upload'
             keyPassword 'Mummy@123'
-            storeFile file('D:/GoogleCloudCredentials/MosqueManager.jks')
+            storeFile file('/Users/mujeeb/Documents/workspace/MosqueManager.jks')
             storePassword 'Mummy@123'
         }
     }
@@ -14,8 +14,8 @@ android {
         applicationId "org.mujeeb.mosquemanager"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 15
-        versionName "15.0"
+        versionCode 16
+        versionName "16.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         signingConfig signingConfigs.config
     }

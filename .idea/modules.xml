@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android-MosqueManagerNativeAndroidApp.iml" filepath="$PROJECT_DIR$/.idea/modules/Android-MosqueManagerNativeAndroidApp.iml" group="MosqueManagerNativeAndroidApp" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MosqueManagerNativeAndroidApp.iml" filepath="$PROJECT_DIR$/.idea/modules/MosqueManagerNativeAndroidApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MosqueManagerNativeAndroidApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MosqueManagerNativeAndroidApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="MosqueManagerNativeAndroidApp/app" />
     </modules>
   </component>
 </project>
